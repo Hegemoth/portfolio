@@ -1,0 +1,227 @@
+.popup {
+	position: fixed;
+	z-index: 64;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+  color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+	animation: fadeIn 0.3s;
+
+	&--hidden {
+		display: none;
+	}
+
+	&--fade-out {
+		animation: fadeOut 0.3s both;
+	}
+
+	&__content {
+		overflow-y: auto;
+		width: 60%;
+		height: calc(100vh - 200px);
+		padding: 52px;
+		border-radius: 32px;
+    background: linear-gradient(60deg, rgba(85, 83, 83, 0.3), rgba(85, 83, 83, 1));
+	}
+
+	&__title {
+    text-align: center;
+		margin-bottom: 24px;
+		font-size: 40px;
+	}
+
+  &__divider {
+    margin-bottom: 24px;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+	&__description {
+    text-align: justify;
+    margin-bottom: 24px;
+		font-size: 16px;	
+	}
+
+  &__technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+
+  &__technologies-item {
+    width: 30%;
+    text-align: center;
+    margin: 0 12px 12px;
+    padding: 16px 0;
+    font-size: 36px;
+    border: 1px solid #ff0;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__links {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 48px;
+  }
+
+  &__link {    
+    width: 48%;
+    text-align: center;
+    margin-bottom: 12px;
+    padding: 16px 32px;
+    font-size: 36px;
+    border: 2px solid #000;
+    border-radius: 16px;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+	&__close-button {
+		position: fixed;
+		right: 64px;
+		top: 32px;
+		font-size: 128px;
+		border: none;
+		color: #fff;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	&__arrow-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 128px;
+		height: 128px;
+		line-height: 128px;
+		border: none;
+		border-radius: 50%;
+		font-size: 128px;
+		cursor: pointer;
+	}
+
+	&__close-button,
+	&__arrow-button {
+		opacity: 0.5;
+		transition: opacity 0.3s;
+	}
+
+	&__close-button:hover,
+	&__arrow-button:hover {
+		opacity: 1;
+	}
+
+	&__arrow-button--left {
+		left: 5%;
+	}
+
+	&__arrow-button--right {
+		right: 5%;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.popup {
+		&__content {
+			width: 80%;
+		}
+
+		&__close-button {
+			position: fixed;
+			right: 32px;
+			top: 16px;
+			font-size: 64px;
+			border: none;
+			color: #fff;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+    &__technologies-item {
+      width: max-content;
+      padding: 16px 32px;
+    }
+
+    &__link {
+      width: max-content;
+    }
+
+		&__arrow-button {
+			width: 64px;
+			height: 64px;
+			line-height: 64px;
+			font-size: 64px;
+		}
+
+		&__arrow-button--left {
+			left: 2%;
+		}
+
+		&__arrow-button--right {
+			right: 2%;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.popup {
+		&__content {
+			width: 95%;
+			padding: 40px 20px;
+		}
+
+		&__title {
+			font-size: 32px;
+		}
+
+		&__arrow-button {
+			top: auto;
+			bottom: 24px;
+			transform: translate(0);
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.popup {
+		&__title {
+			font-size: 24px;
+		}
+
+    &__heading {
+      font-size: 16px;
+    }
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

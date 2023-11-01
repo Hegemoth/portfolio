@@ -1,0 +1,152 @@
+.about-me-section {
+	margin-top: 32px;
+}
+
+.promo {
+	@include section-heading;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		margin-top: 32px;
+	}
+
+	&__list-item {
+		display: grid;
+		grid-template-columns: 76px 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 12px;
+		align-items: center;
+		width: 90%;
+		padding: 10px;
+		border: 1px solid #fff;
+		border-radius: 12px;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	&__number {
+		margin: 0 auto;
+		font-size: 32px;
+		font-style: oblique;
+		color: #fff;
+	}
+
+	&__description {
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	&__addition {
+		overflow: hidden;
+		margin: 24px 10px 0;
+		border-radius: 20px;
+		box-shadow: 0px 0 40px 40px rgba(255, 255, 255, 0.15);
+	}
+
+	&__addition-paragraph {
+		text-align: center;
+		padding: 10px;
+		font-size: 16px;
+		font-family: monospace;
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+}
+
+.about-note {
+	margin-top: 32px;
+
+	@include section-heading;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		width: 90%;
+		margin: 32px auto 0;
+		padding: 24px 12px;
+		border: 1px solid #ff0;
+		border-radius: 30px;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	&__paragraph {
+		text-align: justify;
+		width: 90%;
+		font-size: 16px;
+		color: #fff;
+
+		&--yellow {
+			color: #ff0;
+		}
+	}
+
+	&__image {
+		width: 90%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.about-note {
+		&__container {
+			flex-direction: row;
+			padding: 24px;
+		}
+
+		&__paragraph {
+			order: 1;
+		}
+
+		&__image {
+			width: 50%;
+			max-height: 152px;
+		}
+	}
+}
+
+@media screen and (min-width: 1250px) {
+	.about-me-section {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 172px;
+	}
+
+	.promo {
+		width: 45%;
+
+		&__heading {
+			font-size: 32px;
+		}
+
+		&__description {
+			font-size: 18px;
+		}
+	}
+
+	.about-note {
+		width: 45%;
+		margin-top: 0;
+
+		&__heading {
+			font-size: 32px;
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.promo__heading {
+		font-size: 36px;
+	}
+
+	.about-note {
+		&__heading {
+			font-size: 36px;
+		}
+		&__paragraph {
+			font-size: 20px;
+		}
+	}
+}

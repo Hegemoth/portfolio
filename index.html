@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Personal website of Michał Janik.">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Michał Janik | Portfolio</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="title">
+				<a class="title__anchor" href="/">
+					<h1 class="title__heading">Michał Janik</h1>
+				</a>
+			</div>
+
+			<button class="hamburger">
+				<span class="hamburger__box">
+					<span class="hamburger__inner"></span>
+				</span>
+			</button>
+
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__list-item">
+						<a class="navigation__anchor" data-section-anchor="home-section" tabindex="0">Home</a>
+					</li>
+
+					<li class="navigation__list-item">
+						<a class="navigation__anchor" data-section-anchor="about-me-section" tabindex="0">Why choose me?</a>
+					</li>
+
+					<li class="navigation__list-item">
+						<a class="navigation__anchor" data-section-anchor="projects-section" tabindex="0">Projects</a>
+					</li>
+
+					<li class="navigation__list-item">
+						<a class="navigation__anchor" data-section-anchor="contact-section" tabindex="0">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="home-section">
+				<img class="home-image" src="assets/html-css-js.svg" alt="HTML, CSS and JavaScript logo">
+
+				<div class="home-container">
+					<div class="home-heading">
+						<h2 class="home-heading__text">
+							Frontend
+							<span class="home-heading__text--secondary">Developer</span>
+						</h2>
+					</div>
+
+					<div class="home-contact">
+						<div class="home-contact--left">
+							<a class="home-contact__anchor" href="mailto:michaljanik.kontakt@gmail.com">
+								<img class="home-contact__image" src="assets/icons/mail-icon.svg" alt="Mail icon">
+							</a>
+						</div>
+
+						<div class="home-contact--right">
+							<a class="home-contact__anchor" href="https://github.com/hegemoth" target="_blank">
+								<img class="home-contact__image" src="assets/icons/github-logo.svg" alt="GitHub logo">
+							</a>
+
+							<a class="home-contact__anchor" href="https://www.linkedin.com/in/michaljanikk" target="_blank">
+								<img class="home-contact__image" src="assets/icons/linkedin-logo.svg" alt="LinkedIn logo">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about-me-section">
+				<div class="promo">
+					<h2 class="promo__heading">Why choose me?</h2>
+
+					<div class="promo__container">
+						<ul class="promo__list">
+							<li class="promo__list-item">
+								<span class="promo__number">&lt;I&gt;</span>
+								<p class="promo__description">I take a reliable approach to the tasks entrusted to me.</p>
+							</li>
+
+							<li class="promo__list-item">
+								<span class="promo__number">&lt;II&gt;</span>
+								<p class="promo__description">My code is clean and readable.</p>
+							</li>
+
+							<li class="promo__list-item">
+								<span class="promo__number">&lt;III&gt;</span>
+								<p class="promo__description">I care about accessibility and follow SEO principles.</p>
+							</li>
+
+							<li class="promo__list-item">
+								<span class="promo__number">&lt;IV&gt;</span>
+								<p class="promo__description">
+									I am an IT enthusiast and spend most of my free time learning new frontend skills.
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="promo__addition">
+						<p class="promo__addition-paragraph">
+							In addition, I pay attention to small details and my websites are user-friendly &ndash; clear and easy to
+							use.
+						</p>
+					</div>
+				</div>
+
+				<article class="about-note">
+					<h2 class="about-note__heading">About me</h2>
+
+					<div class="about-note__container">
+						<p class="about-note__paragraph">
+							<span class="about-note__paragraph--yellow">Hello, World!</span> My name is Michał. I am passionate about
+							frontend development. I have artistic inclinations and pay attention to aesthetics. I am hardworking,
+							creative and a fast learner. I attach great importance to both CSS and JavaScript. I am also constantly
+							developing skills in the React library. My additional asset is having skills in the broader IT field. I
+							graduated from a technical school and have a profession as an IT technician.
+						</p>
+
+						<img class="about-note__image" src="assets/progressive-app.svg" alt="Responsive website on desktop computer and mobile device">
+					</div>
+				</article>
+			</section>
+
+			<section class="projects-section">
+				<h2 class="projects-section__heading">Projects</h2>
+
+				<div class="projects-section__cards">
+					<div class="project-card projects-section__card">
+						<h3 class="project-card__heading">Photography website for client</h3>
+
+						<ul class="project-card__list">
+							<li class="project-card__list-item">Sass</li>
+							<li class="project-card__list-item">Vanilla JS</li>
+						</ul>
+
+						<button class="project-card__button">Soon!</button>
+					</div>
+
+					<div class="project-card projects-section__card">
+						<h3 class="project-card__heading">Media Expert clone</h3>
+
+						<ul class="project-card__list">
+							<li class="project-card__list-item">Sass</li>
+							<li class="project-card__list-item">TypeScript</li>
+						</ul>
+
+						<button class="project-card__button" id="project-2-show-popup-button">Check out project</button>
+					</div>
+
+					<div class="project-card projects-section__card">
+						<h3 class="project-card__heading">Game</h3>
+
+						<ul class="project-card__list">
+							<li class="project-card__list-item">Vanilla CSS</li>
+							<li class="project-card__list-item">Vanilla JS</li>
+						</ul>
+
+						<button class="project-card__button">Soon!</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="skills-section">
+				<h2 class="skills-section__heading">Skills</h2>
+
+				<div class="skills-section__container">
+					<div class="advanced-skills skills-section__advanced">
+						<h3 class="advanced-skills__heading">Advanced:</h3>
+
+						<ul class="advanced-skills__list">
+							<li class="advanced-skills__technology">
+								<img class="advanced-skills__technology-image" src="assets/skills/html-logo.svg" alt="HTML logo">
+								<span class="advanced-skills__technology-name">HTML</span>
+							</li>
+
+							<li class="advanced-skills__technology">
+								<img class="advanced-skills__technology-image" src="assets/skills/css-logo.svg" alt="CSS logo">
+								<span class="advanced-skills__technology-name">CSS</span>
+							</li>
+
+							<li class="advanced-skills__technology">
+								<img class="advanced-skills__technology-image" src="assets/skills/sass-logo.svg" alt="Sass logo">
+								<span class="advanced-skills__technology-name">Sass</span>
+							</li>
+
+							<li class="advanced-skills__technology">
+								<img class="advanced-skills__technology-image" src="assets/skills/js-logo.svg" alt="JavaScript logo">
+								<span class="advanced-skills__technology-name">JavaScript</span>
+							</li>
+
+							<li class="advanced-skills__technology">
+								<img class="advanced-skills__technology-image" src="assets/skills/ts-logo.svg" alt="TypeScript logo">
+								<span class="advanced-skills__technology-name">TypeScript</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="intermediate-skills skills-section__intermediate">
+						<h3 class="intermediate-skills__heading">Intermediate:</h3>
+
+						<ul class="intermediate-skills__list">
+							<li class="intermediate-skills__technology">
+								<img class="intermediate-skills__technology-image" src="assets/skills/react-logo.svg" alt="React logo">
+								<span class="intermediate-skills__technology-name">React</span>
+							</li>
+
+							<li class="intermediate-skills__technology">
+								<img class="intermediate-skills__technology-image" src="assets/skills/nodejs-logo.svg" alt="Node.js logo">
+								<span class="intermediate-skills__technology-name">Node.js</span>
+							</li>
+
+							<li class="intermediate-skills__technology">
+								<img class="intermediate-skills__technology-image" src="assets/skills/git-logo.svg" alt="Git logo">
+								<span class="intermediate-skills__technology-name">Git</span>
+							</li>
+
+							<li class="intermediate-skills__technology">
+								<img class="intermediate-skills__technology-image" src="assets/skills/php-logo.svg" alt="PHP logo">
+								<span class="intermediate-skills__technology-name">PHP</span>
+							</li>
+
+							<li class="intermediate-skills__technology">
+								<img class="intermediate-skills__technology-image" src="assets/skills/sql-logo.svg" alt="SQL logo">
+								<span class="intermediate-skills__technology-name">SQL</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact-section">
+				<h2 class="contact-section__heading">Contact me</h2>
+
+				<div class="contact-section__container">
+					<div class="contact-section__flex-element">
+						<div class="contact-section__email">
+							<p class="contact-section__email-title">Email me:</p>
+							<a class="contact-section__email-anchor" href="mailto:michaljanik.kontakt@gmail.com">
+								michaljanik.kontakt@gmail.com
+							</a>
+						</div>
+					</div>
+
+					<div class="contact-section__flex-element">
+						<p class="contact-section__divider">or</p>
+					</div>
+
+					<div class="contact-section__flex-element">
+						<p class="contact-section__form-title">Fill out the form:</p>
+
+						<form class="contact-form contact-section__form" action="https://formsubmit.io/send/michaljanik.kontakt@gmail.com" method="POST">
+							<div class="contact-form__field">
+								<label class="contact-form__label" for="contact-form-name">Name</label>
+								<input class="contact-form__input" name="contact-form-name" id="contact-form-name" type="text" placeholder="Enter your name" required>
+							</div>
+
+							<div class="contact-form__field">
+								<label class="contact-form__label" for="contact-form-email">Email</label>
+								<input class="contact-form__input" name="contact-form-email" id="contact-form-email" type="email" placeholder="Enter your email address" required>
+							</div>
+
+							<div class="contact-form__field">
+								<label class="contact-form__label" for="contact-form-message">Message</label>
+								<textarea class="contact-form__input" name="contact-form-message" id="contact-form-message" rows="10" placeholder="Enter your message"></textarea>
+							</div>
+
+							<button class="contact-form__button" type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<a class="footer__anchor" href="/">Michał Janik</a> 2023 |
+			<a class="footer__anchor" href="https://github.com/hegemoth" target="_blank">GitHub</a> |
+			<a class="footer__anchor" href="https://www.linkedin.com/in/michaljanikk" target="_blank">LinkedIn</a>
+		</footer>
+
+		<div class="popup popup--hidden" id="popup-project-media-expert">
+			<button class="popup__close-button" aria-label="Close popup">X</button>
+
+			<div class="popup__content">
+				<h2 class="popup__title">Media Expert clone</h2>
+				<hr class="popup__divider">
+				<h3 class="popup__heading">✨ Project description</h3>
+
+				<p class="popup__description">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae aperiam temporibus earum enim
+					itaque asperiores facere, aliquam, ab porro explicabo, est doloremque sint sunt nemo dicta praesentium numquam
+					delectus iusto dolore quisquam labore assumenda atque. Deleniti accusamus fuga possimus aperiam, quae
+					eligendi, rerum officiis, vero animi dolor dolore illum? Distinctio culpa, dolore iusto quae similique odio
+					fugiat alias debitis, omnis veniam corrupti illo nemo a aut doloremque sapiente aliquid itaque provident
+					explicabo libero laudantium natus. Nisi consequatur cumque corporis explicabo tempore illo sed possimus minima
+					magni, error hic itaque qui veniam quisquam ipsum, consectetur dolorum dignissimos libero. Aperiam error id
+					deleniti eveniet consectetur dignissimos sapiente facere autem dicta. Velit aut reprehenderit ex excepturi.
+					Maiores ipsum ad, in eligendi quia dolores, sapiente nesciunt totam similique doloremque perferendis
+					provident, voluptas iure. Error iusto ipsa laboriosam dolorem adipisci debitis soluta eum, magnam distinctio
+					quidem ullam, necessitatibus itaque omnis unde, ad non hic.
+				</p>
+
+				<h3 class="popup__heading">⚙️ Technologies</h3>
+
+				<ul class="popup__technologies-list">
+					<li class="popup__technologies-item">HTML</li>
+					<li class="popup__technologies-item">Sass</li>
+					<li class="popup__technologies-item">TypeScript</li>
+				</ul>
+
+				<div class="popup__links">
+					<a class="popup__link" href="#">📦 Repository</a>
+					<a class="popup__link" href="#">🌐 Website</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>

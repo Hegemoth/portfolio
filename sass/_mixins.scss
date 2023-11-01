@@ -1,0 +1,34 @@
+@mixin section-heading {
+	&__heading {
+		position: relative;
+		width: max-content;
+		margin: 0 auto;
+		font-size: 24px;
+		color: #fff;
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -16;
+			right: 40%;
+			top: -4px;
+			transform: skew(-30deg);
+			width: 75%;
+			height: 130%;
+			border: 1px solid #ff0;
+			background-color: #000;
+		}
+	}
+}
+
+@mixin section-heading-1250px {
+	&__heading {
+		font-size: 32px;
+	}
+}
+
+@mixin section-heading-1400px {
+	&__heading {
+		font-size: 36px;
+	}
+}
