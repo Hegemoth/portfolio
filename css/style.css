@@ -9,6 +9,14 @@ body {
   overflow-x: hidden;
 }
 
+.html--popup {
+  overflow: unset;
+}
+
+.body--popup {
+  overflow: hidden;
+}
+
 body {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
@@ -1004,6 +1012,7 @@ body * {
   flex-wrap: wrap;
   justify-content: space-evenly;
   list-style: none;
+  margin-bottom: 24px;
 }
 .popup__technologies-item {
   width: 30%;
@@ -1019,7 +1028,7 @@ body * {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 48px;
+  margin-top: 36px;
 }
 .popup__link {
   width: 48%;

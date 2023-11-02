@@ -26,19 +26,19 @@
 			<nav class="navigation">
 				<ul class="navigation__list">
 					<li class="navigation__list-item">
-						<a class="navigation__anchor" data-section-anchor="home-section" tabindex="0">Home</a>
+						<a class="navigation__anchor" data-section-anchor="home-section">Home</a>
 					</li>
 
 					<li class="navigation__list-item">
-						<a class="navigation__anchor" data-section-anchor="about-me-section" tabindex="0">Why choose me?</a>
+						<a class="navigation__anchor" data-section-anchor="about-me-section">Why choose me?</a>
 					</li>
 
 					<li class="navigation__list-item">
-						<a class="navigation__anchor" data-section-anchor="projects-section" tabindex="0">Projects</a>
+						<a class="navigation__anchor" data-section-anchor="projects-section">Projects</a>
 					</li>
 
 					<li class="navigation__list-item">
-						<a class="navigation__anchor" data-section-anchor="contact-section" tabindex="0">Contact</a>
+						<a class="navigation__anchor" data-section-anchor="contact-section">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -143,7 +143,7 @@
 							<li class="project-card__list-item">Vanilla JS</li>
 						</ul>
 
-						<button class="project-card__button">Soon!</button>
+						<button class="project-card__button">Check out project</button>
 					</div>
 
 					<div class="project-card projects-section__card">
@@ -154,18 +154,18 @@
 							<li class="project-card__list-item">TypeScript</li>
 						</ul>
 
-						<button class="project-card__button" id="project-2-show-popup-button">Check out project</button>
+						<button class="project-card__button">Check out project</button>
 					</div>
 
 					<div class="project-card projects-section__card">
-						<h3 class="project-card__heading">Game</h3>
+						<h3 class="project-card__heading">Game "Rock, Paper, Scissors"</h3>
 
 						<ul class="project-card__list">
 							<li class="project-card__list-item">Vanilla CSS</li>
 							<li class="project-card__list-item">Vanilla JS</li>
 						</ul>
 
-						<button class="project-card__button">Soon!</button>
+						<button class="project-card__button">Check out project</button>
 					</div>
 				</div>
 			</section>
@@ -245,9 +245,7 @@
 					<div class="contact-section__flex-element">
 						<div class="contact-section__email">
 							<p class="contact-section__email-title">Email me:</p>
-							<a class="contact-section__email-anchor" href="mailto:michaljanik.kontakt@gmail.com">
-								michaljanik.kontakt@gmail.com
-							</a>
+							<a class="contact-section__email-anchor" href="mailto:michaljanik.kontakt@gmail.com">michaljanik.kontakt@gmail.com</a>
 						</div>
 					</div>
 
@@ -287,42 +285,108 @@
 			<a class="footer__anchor" href="https://www.linkedin.com/in/michaljanikk" target="_blank">LinkedIn</a>
 		</footer>
 
-		<div class="popup popup--hidden" id="popup-project-media-expert">
-			<button class="popup__close-button" aria-label="Close popup">X</button>
+		<div class="popup popup--hidden">
+			<button class="popup__button popup__close-button" aria-label="Close popup">X</button>
 
-			<div class="popup__content">
-				<h2 class="popup__title">Media Expert clone</h2>
-				<hr class="popup__divider">
-				<h3 class="popup__heading">✨ Project description</h3>
+			<button class="popup__button popup__arrow-button popup__arrow-button--left" aria-label="Previous project">
+				&lt;
+			</button>
+			<button class="popup__button popup__arrow-button popup__arrow-button--right" aria-label="Next project">
+				&gt;
+			</button>
 
-				<p class="popup__description">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae aperiam temporibus earum enim
-					itaque asperiores facere, aliquam, ab porro explicabo, est doloremque sint sunt nemo dicta praesentium numquam
-					delectus iusto dolore quisquam labore assumenda atque. Deleniti accusamus fuga possimus aperiam, quae
-					eligendi, rerum officiis, vero animi dolor dolore illum? Distinctio culpa, dolore iusto quae similique odio
-					fugiat alias debitis, omnis veniam corrupti illo nemo a aut doloremque sapiente aliquid itaque provident
-					explicabo libero laudantium natus. Nisi consequatur cumque corporis explicabo tempore illo sed possimus minima
-					magni, error hic itaque qui veniam quisquam ipsum, consectetur dolorum dignissimos libero. Aperiam error id
-					deleniti eveniet consectetur dignissimos sapiente facere autem dicta. Velit aut reprehenderit ex excepturi.
-					Maiores ipsum ad, in eligendi quia dolores, sapiente nesciunt totam similique doloremque perferendis
-					provident, voluptas iure. Error iusto ipsa laboriosam dolorem adipisci debitis soluta eum, magnam distinctio
-					quidem ullam, necessitatibus itaque omnis unde, ad non hic.
-				</p>
-
-				<h3 class="popup__heading">⚙️ Technologies</h3>
-
-				<ul class="popup__technologies-list">
-					<li class="popup__technologies-item">HTML</li>
-					<li class="popup__technologies-item">Sass</li>
-					<li class="popup__technologies-item">TypeScript</li>
-				</ul>
-
-				<div class="popup__links">
-					<a class="popup__link" href="#">📦 Repository</a>
-					<a class="popup__link" href="#">🌐 Website</a>
-				</div>
-			</div>
+			<div class="popup__content"></div>
 		</div>
+
+		<template class="popup-template" id="popup-template-0">
+			<h2 class="popup__title">Photography Site for Client</h2>
+			<hr class="popup__divider">
+			<h3 class="popup__heading">✨ Project description</h3>
+
+			<p class="popup__description">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi laborum officia, nemo beatae magnam sunt adipisci
+				eum neque quae nobis illo delectus voluptates rem, praesentium eveniet consequatur quas, dicta explicabo!
+				Asperiores dolores quo accusantium rem sed dignissimos explicabo? Explicabo soluta voluptatem quia laboriosam
+				error illum ullam repellat, tempore sint omnis impedit iste quae corporis magnam officia laudantium eligendi,
+				accusantium quidem facere nulla quas cupiditate vel hic eum. Nam optio repellat iusto. Molestiae nemo velit et
+				voluptate in facilis id odio.
+			</p>
+
+			<h3 class="popup__heading">⚙️ Technologies</h3>
+
+			<ul class="popup__technologies-list">
+				<li class="popup__technologies-item">HTML</li>
+				<li class="popup__technologies-item">Sass</li>
+				<li class="popup__technologies-item">JavaScript</li>
+			</ul>
+
+			<h3 class="popup__heading">🔗 Links</h3>
+
+			<div class="popup__links">
+				<a class="popup__link" href="#" target="_blank">📦 Repository</a>
+				<a class="popup__link" href="#" target="_blank">🌐 Website</a>
+			</div>
+		</template>
+
+		<template class="popup-template" id="popup-template-1">
+			<h2 class="popup__title">Media Expert clone</h2>
+			<hr class="popup__divider">
+			<h3 class="popup__heading">✨ Project description</h3>
+
+			<p class="popup__description">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae aperiam temporibus earum enim
+				itaque asperiores facere, aliquam, ab porro explicabo, est doloremque sint sunt nemo dicta praesentium numquam
+				delectus iusto dolore quisquam labore assumenda atque. Deleniti accusamus fuga possimus aperiam, quae eligendi,
+				rerum officiis, vero animi dolor dolore illum? Distinctio culpa, dolore iusto quae similique odio fugiat alias
+				debitis, omnis veniam corrupti illo nemo a aut doloremque sapiente aliquid itaque provident explicabo libero
+				laudantium natus. Nisi consequatur cumque corporis explicabo tempore illo sed possimus minima magni, error hic
+				itaque qui veniam quisquam ipsum.
+			</p>
+
+			<h3 class="popup__heading">⚙️ Technologies</h3>
+
+			<ul class="popup__technologies-list">
+				<li class="popup__technologies-item">HTML</li>
+				<li class="popup__technologies-item">Sass</li>
+				<li class="popup__technologies-item">TypeScript</li>
+			</ul>
+
+			<h3 class="popup__heading">🔗 Links</h3>
+
+			<div class="popup__links">
+				<a class="popup__link" href="https://github.com/Hegemoth/media-expert-clone" target="_blank">📦 Repository</a>
+				<a class="popup__link" href="https://michaljanik-media-expert-clone.netlify.app/" target="_blank">🌐 Website</a>
+			</div>
+		</template>
+
+		<template class="popup-template" id="popup-template-2">
+			<h2 class="popup__title">Game "Rock, Paper, Scissors"</h2>
+			<hr class="popup__divider">
+			<h3 class="popup__heading">✨ Project description</h3>
+
+			<p class="popup__description">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum iste necessitatibus accusantium dicta
+				consequatur iure itaque nihil sequi porro aperiam consectetur alias animi dignissimos, quia atque incidunt
+				excepturi nam dolores facere assumenda? Iure modi repellendus labore molestias at ea dignissimos. Qui temporibus
+				saepe obcaecati soluta? Itaque, ducimus sit eos, fugit sequi ex ipsum vitae officia modi repellat odio impedit,
+				distinctio doloribus dicta. Ipsam doloribus similique rerum laboriosam totam in rem.
+			</p>
+
+			<h3 class="popup__heading">⚙️ Technologies</h3>
+
+			<ul class="popup__technologies-list">
+				<li class="popup__technologies-item">HTML</li>
+				<li class="popup__technologies-item">CSS</li>
+				<li class="popup__technologies-item">JavaScript</li>
+			</ul>
+
+			<h3 class="popup__heading">🔗 Links</h3>
+
+			<div class="popup__links">
+				<a class="popup__link" href="#" target="_blank">📦 Repository</a>
+				<a class="popup__link" href="#" target="_blank">🌐 Website</a>
+			</div>
+		</template>
 
 		<script src="js/main.js"></script>
 	</body>

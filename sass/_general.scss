@@ -9,6 +9,14 @@ body {
 	overflow-x: hidden;
 }
 
+.html--popup {
+	overflow: unset;
+}
+
+.body--popup {
+	overflow: hidden;
+}
+
 body {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;

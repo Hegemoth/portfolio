@@ -1,28 +1,37 @@
-// Selectors
+// Global selectors
 
 const headerElement = document.querySelector('.header');
 const hamburgerButtonElement = document.querySelector('.hamburger');
 const navigationElement = document.querySelector('.navigation');
-const navigationAnchorElement = document.querySelectorAll('.navigation__anchor');
+const popupElement = document.querySelector('.popup');
+const popupCloseButton = document.querySelector('.popup__close-button');
+const arrowLeftButton = document.querySelector('.popup__arrow-button--left');
+const arrowRightButton = document.querySelector('.popup__arrow-button--right');
+const popupContentElement = document.querySelector('.popup__content');
 
-// Hamburger mobile
+const navigationAnchorElements = document.querySelectorAll('.navigation__anchor');
+const popupTemplateElements = document.querySelectorAll('.popup-template');
+const showPopupButtons = document.querySelectorAll('.project-card__button');
+const toDisableTabindexElements = document.querySelectorAll(
+	'a, area, input, select, textarea, button:not(.popup__button), iframe, object, embed, [tabindex="0"], [contenteditable]'
+);
 
-const activateHamburgerMenu = () => {
+// Variables
+
+let currentPopupIndex;
+
+// Functionality
+
+const toggleHamburgerMenu = () => {
 	hamburgerButtonElement.classList.toggle('hamburger--active');
 	navigationElement.classList.toggle('navigation--active');
 
-	// Navigation tabindexes (accesibillity)
-
 	if (navigationElement.classList.contains('navigation--active')) {
-		navigationAnchorElement.forEach(anchor => anchor.setAttribute('tabindex', 0));
+		navigationAnchorElements.forEach((anchor) => anchor.setAttribute('tabindex', 0));
 	} else {
-		navigationAnchorElement.forEach(anchor => anchor.setAttribute('tabindex', -1));
+		navigationAnchorElements.forEach((anchor) => anchor.setAttribute('tabindex', -1));
 	}
 };
-
-hamburgerButtonElement.addEventListener('click', activateHamburgerMenu);
-
-// Sticky header
 
 const stickHeader = () => {
 	if (window.scrollY > 0) {
@@ -32,19 +41,14 @@ const stickHeader = () => {
 	}
 };
 
-window.addEventListener('scroll', stickHeader);
-
-// Nav - scroll to section
-
-const scrollToSection = event => {
+const scrollToSection = (event) => {
 	if (event.target.tagName === 'A') {
 		const sectionAnchor = event.target.dataset.sectionAnchor;
 
-		// Disable navigation if desktop resolution
 		if (navigationElement.classList.contains('navigation--active')) {
 			navigationElement.classList.remove('navigation--active');
 			hamburgerButtonElement.classList.remove('hamburger--active');
-			navigationAnchorElement.forEach(anchor => anchor.setAttribute('tabindex', -1));
+			navigationAnchorElements.forEach((anchor) => anchor.setAttribute('tabindex', -1));
 		}
 
 		if (sectionAnchor === 'home-section') {
@@ -59,32 +63,116 @@ const scrollToSection = event => {
 	}
 };
 
+// Popup operations
+
+const showPreviousPopup = () => {
+	if (currentPopupIndex === 0) {
+		currentPopupIndex = popupTemplateElements.length - 1;
+	} else {
+		currentPopupIndex--;
+	}
+
+	const popupTemplate = document.querySelector(`#popup-template-${currentPopupIndex}`).content.cloneNode(true);
+
+	popupContentElement.textContent = '';
+	popupContentElement.appendChild(popupTemplate);
+};
+
+const showNextPopup = () => {
+	if (currentPopupIndex === popupTemplateElements.length - 1) {
+		currentPopupIndex = 0;
+	} else {
+		currentPopupIndex++;
+	}
+
+	const popupTemplate = document.querySelector(`#popup-template-${currentPopupIndex}`).content.cloneNode(true);
+	popupContentElement.textContent = '';
+	popupContentElement.appendChild(popupTemplate);
+};
+
+const closePopup = () => {
+	document.documentElement.classList.remove('html--popup');
+	document.body.classList.remove('body--popup');
+
+	popupElement.classList.add('popup--fade-out');
+
+	toDisableTabindexElements.forEach((element) => {
+		element.setAttribute('tabindex', 0);
+	});
+
+	setTimeout(() => {
+		popupElement.classList.add('popup--hidden');
+		popupElement.classList.remove('popup--fade-out');
+
+		popupContentElement.textContent = '';
+	}, 300);
+};
+
+const showPopup = (index) => {
+	popupElement.classList.remove('popup--hidden');
+	document.documentElement.classList.add('html--popup');
+	document.body.classList.add('body--popup');
+
+	currentPopupIndex = index;
+
+	const popupTemplate = document.querySelector(`#popup-template-${index}`).content.cloneNode(true);
+	popupContentElement.appendChild(popupTemplate);
+
+	toDisableTabindexElements.forEach((element) => {
+		element.setAttribute('tabindex', -1);
+	});
+};
+
+// Listeners
+
+hamburgerButtonElement.addEventListener('click', toggleHamburgerMenu);
+window.addEventListener('scroll', stickHeader);
 navigationElement.addEventListener('click', scrollToSection);
 
-navigationElement.addEventListener('keydown', event => {
+navigationElement.addEventListener('keydown', (event) => {
 	if (event.code === 'Enter') {
 		scrollToSection(event);
 	}
 });
 
-// Popup operations
+arrowLeftButton.addEventListener('click', showPreviousPopup);
+arrowRightButton.addEventListener('click', showNextPopup);
+popupCloseButton.addEventListener('click', closePopup);
 
-const popupElement = document.querySelector('.popup');
-const project2ShowPopupButton = document.querySelector('#project-2-show-popup-button');
-const closePopupButton = document.querySelector('.popup__close-button');
+showPopupButtons.forEach((button, index) => {
+	button.addEventListener('click', () => showPopup(index));
+});
 
-const showPopup = () => {
-	popupElement.classList.remove('popup--hidden');
-};
+document.addEventListener('keydown', (event) => {
+	if (!popupElement.classList.contains('popup--hidden')) {
+		if (event.code === 'ArrowRight') {
+			showNextPopup();
+		}
 
-const closePopup = () => {
-	popupElement.classList.add('popup--fade-out');
+		if (event.code === 'ArrowLeft') {
+			showPreviousPopup();
+		}
 
-	setTimeout(() => {
-		popupElement.classList.add('popup--hidden');
-		popupElement.classList.remove('popup--fade-out');
-	}, 300);
-};
+		if (event.code === 'Escape') {
+			closePopup();
+		}
+	}
+});
 
-project2ShowPopupButton.addEventListener('click', showPopup);
-closePopupButton.addEventListener('click', closePopup);
+popupElement.addEventListener('click', (event) => {
+	if (event.target === popupElement) {
+		closePopup();
+	}
+});
+
+const resizeObserver = new ResizeObserver((entries) => {
+	if (entries[0].contentRect.width < 900) {
+		navigationAnchorElements.forEach((anchor) => anchor.setAttribute('tabindex', -1));
+		navigationElement.classList.remove('navigation--active');
+		hamburgerButtonElement.classList.remove('hamburger--active');
+	} else {
+		navigationAnchorElements.forEach((anchor) => anchor.setAttribute('tabindex', 0));
+	}
+});
+
+resizeObserver.observe(document.body);
