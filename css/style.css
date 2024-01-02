@@ -553,7 +553,9 @@ body * {
 }
 .project-card__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 16px;
   list-style: none;
   margin-top: auto;
 }
@@ -698,6 +700,7 @@ body * {
 }
 .advanced-skills__technology-name {
   color: #fff;
+  font-size: 14px;
 }
 .advanced-skills__technology:first-child {
   width: 100%;
@@ -734,6 +737,7 @@ body * {
 }
 .intermediate-skills__technology-name {
   color: #fff;
+  font-size: 14px;
 }
 .intermediate-skills__technology:nth-child(3) {
   width: 100%;
