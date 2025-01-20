@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Personal website of Michał Janik." />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/home-section.css" />
+    <link rel="stylesheet" href="css/about-me-section.css" />
+    <link rel="stylesheet" href="css/projects-section.css" />
+    <link rel="stylesheet" href="css/skills-section.css" />
+    <link rel="stylesheet" href="css/contact-section.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/popup.css" />
     <title>Michał Janik | Portfolio</title>
   </head>
 
@@ -118,8 +126,8 @@
             <p class="about-note__paragraph">
               <span class="about-note__paragraph--yellow">Hello, World!</span> My name is Michał. I am passionate about frontend development. I have
               artistic inclinations and pay attention to aesthetics. I am hardworking, creative and a fast learner. I attach great importance to both
-              CSS and JavaScript. I am also constantly developing skills in the React library. My additional asset is having skills in the broader IT
-              field. I graduated from a technical school and have a profession as an IT technician.
+              CSS and JavaScript. I am also constantly developing my skills in React and its ecosystem. My additional asset is having skills in the
+              broader IT field. I graduated from a technical school and have a profession as an IT technician.
             </p>
 
             <img class="about-note__image" src="assets/progressive-app.svg" alt="Responsive website on desktop computer and mobile device" />
@@ -132,33 +140,44 @@
 
         <div class="projects-section__cards">
           <div class="project-card projects-section__card">
-            <h3 class="project-card__heading">Photography website for client</h3>
+            <h3 class="project-card__heading">Business.mgmt</h3>
 
             <ul class="project-card__list">
-              <li class="project-card__list-item">Sass</li>
-              <li class="project-card__list-item">React (TS)</li>
-            </ul>
-
-            <button class="project-card__button">Check out project</button>
-          </div>
-
-          <div class="project-card projects-section__card">
-            <h3 class="project-card__heading">Media Expert clone</h3>
-
-            <ul class="project-card__list">
-              <li class="project-card__list-item">Sass</li>
+              <li class="project-card__list-item">React</li>
               <li class="project-card__list-item">TypeScript</li>
+              <li class="project-card__list-item">Redux</li>
+              <li class="project-card__list-item">MUI</li>
+              <li class="project-card__list-item">Formik</li>
+              <li class="project-card__list-item">json-server</li>
+              <!-- TODO: Add when ready -->
+              <!-- <li class="project-card__list-item">i18n</li> -->
+              <!-- <li class="project-card__list-item">Playwright</li> -->
             </ul>
 
             <button class="project-card__button">Check out project</button>
           </div>
 
           <div class="project-card projects-section__card">
-            <h3 class="project-card__heading">Clothing Shop</h3>
+            <h3 class="project-card__heading">E-commerce store</h3>
 
             <ul class="project-card__list">
+              <li class="project-card__list-item">React</li>
+              <li class="project-card__list-item">TypeScript</li>
+              <li class="project-card__list-item">SCSS</li>
+              <li class="project-card__list-item">CSS Modules</li>
+              <li class="project-card__list-item">json-server</li>
+            </ul>
+
+            <button class="project-card__button">Check out project</button>
+          </div>
+
+          <div class="project-card projects-section__card">
+            <h3 class="project-card__heading">Portfolio</h3>
+
+            <ul class="project-card__list">
+              <li class="project-card__list-item">HTML</li>
               <li class="project-card__list-item">CSS</li>
-              <li class="project-card__list-item">React (JS)</li>
+              <li class="project-card__list-item">JavaScript</li>
             </ul>
 
             <button class="project-card__button">Check out project</button>
@@ -170,77 +189,54 @@
         <h2 class="skills-section__heading">Skills</h2>
 
         <div class="skills-section__container">
-          <div class="advanced-skills skills-section__advanced">
-            <h3 class="advanced-skills__heading">Advanced:</h3>
+          <ul class="skills__list">
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/html-logo.svg" alt="HTML logo" />
+              <span class="skills__technology-name">HTML</span>
+            </li>
 
-            <ul class="advanced-skills__list">
-              <li class="advanced-skills__technology">
-                <img class="advanced-skills__technology-image" src="assets/skills/html-logo.svg" alt="HTML logo" />
-                <span class="advanced-skills__technology-name">HTML</span>
-              </li>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/css-logo.svg" alt="CSS logo" />
+              <span class="skills__technology-name">CSS</span>
+            </li>
 
-              <li class="advanced-skills__technology">
-                <img class="advanced-skills__technology-image" src="assets/skills/css-logo.svg" alt="CSS logo" />
-                <span class="advanced-skills__technology-name">CSS</span>
-              </li>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/sass-logo.svg" alt="Sass logo" />
+              <span class="skills__technology-name">Sass</span>
+            </li>
 
-              <li class="advanced-skills__technology">
-                <img class="advanced-skills__technology-image" src="assets/skills/sass-logo.svg" alt="Sass logo" />
-                <span class="advanced-skills__technology-name">Sass</span>
-              </li>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/js-logo.svg" alt="JavaScript logo" />
+              <span class="skills__technology-name">JavaScript</span>
+            </li>
 
-              <li class="advanced-skills__technology">
-                <img class="advanced-skills__technology-image" src="assets/skills/js-logo.svg" alt="JavaScript logo" />
-                <span class="advanced-skills__technology-name">JavaScript</span>
-              </li>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/ts-logo.svg" alt="TypeScript logo" />
+              <span class="skills__technology-name">TypeScript</span>
+            </li>
 
-              <li class="advanced-skills__technology">
-                <img class="advanced-skills__technology-image" src="assets/skills/ts-logo.svg" alt="TypeScript logo" />
-                <span class="advanced-skills__technology-name">TypeScript</span>
-              </li>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/react-logo.svg" alt="React logo" />
+              <span class="skills__technology-name">React</span>
+            </li>
 
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/react-logo.svg" alt="React logo" />
-                <span class="intermediate-skills__technology-name">React</span>
-              </li>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/redux-logo.svg" alt="Redux logo" />
+              <span class="skills__technology-name">Redux</span>
+            </li>
 
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/redux-logo.svg" alt="Redux logo" />
-                <span class="intermediate-skills__technology-name">Redux</span>
-              </li>
-            </ul>
-          </div>
+            <li class="skills__technology">
+              <div class="nextjs-container">
+                <img class="skills__technology-image" id="nextjs-image" src="assets/skills/nextjs-logo.svg" alt="Next.js logo" />
+              </div>
+              <span class="skills__technology-name">Next.js</span>
+            </li>
 
-          <div class="intermediate-skills skills-section__intermediate">
-            <h3 class="intermediate-skills__heading">Intermediate:</h3>
-
-            <ul class="intermediate-skills__list">
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/nextjs-logo.svg" alt="Next.js logo" />
-                <span class="intermediate-skills__technology-name">Next.js</span>
-              </li>
-
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/nodejs-logo.svg" alt="Node.js logo" />
-                <span class="intermediate-skills__technology-name">Node.js</span>
-              </li>
-
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/git-logo.svg" alt="Git logo" />
-                <span class="intermediate-skills__technology-name">Git</span>
-              </li>
-
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/php-logo.svg" alt="PHP logo" />
-                <span class="intermediate-skills__technology-name">PHP</span>
-              </li>
-
-              <li class="intermediate-skills__technology">
-                <img class="intermediate-skills__technology-image" src="assets/skills/sql-logo.svg" alt="SQL logo" />
-                <span class="intermediate-skills__technology-name">SQL</span>
-              </li>
-            </ul>
-          </div>
+            <li class="skills__technology">
+              <img class="skills__technology-image" src="assets/skills/nodejs-logo.svg" alt="Node.js logo" />
+              <span class="skills__technology-name">Node.js</span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -306,13 +302,13 @@
     </main>
 
     <footer class="footer">
-      <a class="footer__anchor" href="/">Michał Janik</a> 2023 |
+      <a class="footer__anchor" href="/">Michał Janik</a> <time id="current-year"></time> |
       <a class="footer__anchor" href="https://github.com/hegemoth" target="_blank">GitHub</a> |
       <a class="footer__anchor" href="https://www.linkedin.com/in/michaljanikk" target="_blank">LinkedIn</a>
     </footer>
 
     <div class="popup popup--hidden">
-      <button class="popup__button popup__close-button" aria-label="Close popup">X</button>
+      <button class="popup__button popup__close-button" aria-label="Close popup">x</button>
 
       <button class="popup__button popup__arrow-button popup__arrow-button--left" aria-label="Previous project">&lt;</button>
       <button class="popup__button popup__arrow-button popup__arrow-button--right" aria-label="Next project">&gt;</button>
@@ -321,103 +317,128 @@
     </div>
 
     <template class="popup-template" id="popup-template-0">
-      <h2 class="popup__title">Photography Website for Client</h2>
+      <h2 class="popup__title">Business.mgmt</h2>
       <hr class="popup__divider" />
       <h3 class="popup__heading">✨ Project description</h3>
 
       <p class="popup__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi laborum officia, nemo beatae magnam sunt adipisci eum neque quae nobis illo
-        delectus voluptates rem, praesentium eveniet consequatur quas, dicta explicabo! Asperiores dolores quo accusantium rem sed dignissimos
-        explicabo? Explicabo soluta voluptatem quia laboriosam error illum ullam repellat, tempore sint omnis impedit iste quae corporis magnam
-        officia laudantium eligendi, accusantium quidem facere nulla quas cupiditate vel hic eum. Nam optio repellat iusto. Molestiae nemo velit et
-        voluptate in facilis id odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi laborum officia, nemo beatae magnam sunt adipisci
-        eum neque quae nobis illo delectus voluptates rem, praesentium eveniet consequatur quas, dicta explicabo! Asperiores dolores quo accusantium
-        rem sed dignissimos explicabo? Explicabo soluta voluptatem quia laboriosam error illum ullam repellat, tempore sint omnis impedit iste quae
-        corporis magnam officia laudantium eligendi, accusantium quidem facere nulla quas cupiditate vel hic eum. Nam optio repellat iusto. Molestiae
-        nemo velit et voluptate in facilis id odio.
+        The application helps users manage their business and monitor expenses. It emphasizes data analysis and editing. Key functionalities include
+        filtering, sorting, setting record limits, and pagination.
       </p>
+
+      <h3 class="popup__heading">🙌 What’s easy to overlook but helps fully appreciate the project?</h3>
+
+      <ul class="popup__highlights">
+        <li>
+          <strong>useAsyncPagination</strong> - A custom hook for handling filters (add, replace, delete, reset) and sorting data from the API,
+          providing an effortless experience.
+        </li>
+        <li><strong>useModalMode</strong> - A single hook managing the state, content, and functionality of modals.</li>
+        <li><strong>InnerTableWrapper</strong> - A component ensuring that nested tables are responsive and maintain appropriate widths.</li>
+        <li>Extensive configuration of <strong>MUI</strong> in the <em>theme</em> folder.</li>
+        <li>Enhanced backend - built on <strong>json-server</strong> with custom modifications for added functionality.</li>
+        <li>
+          Redux logic utilizing <strong>RTK Query</strong> for API communication and <strong>redux-persist</strong> for storing the state in
+          localStorage.
+        </li>
+        <li>Project scale, considering it was developed by a single person.</li>
+      </ul>
 
       <h3 class="popup__heading">⚙️ Technologies</h3>
 
       <ul class="popup__technologies-list">
         <li class="popup__technologies-item">React</li>
         <li class="popup__technologies-item">TypeScript</li>
-        <li class="popup__technologies-item">Next.js</li>
-        <li class="popup__technologies-item">CSS-in-JS</li>
-        <li class="popup__technologies-item">SCSS</li>
+        <li class="popup__technologies-item">Redux Toolkit</li>
+        <li class="popup__technologies-item">RTK Query</li>
+        <li class="popup__technologies-item">MUI</li>
+        <li class="popup__technologies-item">Formik</li>
+        <!-- TODO: Add when ready -->
+        <!-- <li class="popup__technologies-item">i18n</li> -->
+        <!-- <li class="popup__technologies-item">Playwright</li> -->
+        <li class="popup__technologies-item">json-server</li>
       </ul>
 
       <h3 class="popup__heading">🔗 Links</h3>
 
       <div class="popup__links">
-        <a class="popup__link" href="#" target="_blank">📦 Soon</a>
-        <a class="popup__link" href="#" target="_blank">🌐 Soon</a>
+        <a class="popup__link" href="https://github.com/Hegemoth/business-mgmt" target="_blank">📦 Repository</a>
+        <a class="popup__link" href="https://business-mgmt.netlify.app" target="_blank">🌐 Website</a>
       </div>
     </template>
 
     <template class="popup-template" id="popup-template-1">
-      <h2 class="popup__title">Media Expert clone</h2>
+      <h2 class="popup__title">E-commerce store</h2>
       <hr class="popup__divider" />
       <h3 class="popup__heading">✨ Project description</h3>
 
       <p class="popup__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae aperiam temporibus earum enim itaque asperiores facere, aliquam,
-        ab porro explicabo, est doloremque sint sunt nemo dicta praesentium numquam delectus iusto dolore quisquam labore assumenda atque. Deleniti
-        accusamus fuga possimus aperiam, quae eligendi, rerum officiis, vero animi dolor dolore illum? Distinctio culpa, dolore iusto quae similique
-        odio fugiat alias debitis, omnis veniam corrupti illo nemo a aut doloremque sapiente aliquid itaque provident explicabo libero laudantium
-        natus. Nisi consequatur cumque corporis explicabo tempore illo sed possimus minima magni, error hic itaque qui veniam quisquam ipsum.
+        This application simulates an online shopping experience, including adding products to favorites and the shopping cart.
       </p>
+
+      <h3 class="popup__heading">🙌 What’s easy to overlook but helps fully appreciate the project?</h3>
+
+      <ul class="popup__highlights">
+        <li><strong>TypeScript</strong> - fully type-safe with zero any types.</li>
+        <li>Routing architecture and how <strong>React Router</strong> handles the action and loaders.</li>
+        <li><strong>productListLoader</strong> - a well-crafted solution for displaying products and managing pagination.</li>
+      </ul>
+
+      <h3 class="popup__heading">⚙️ Technologies</h3>
+
+      <ul class="popup__technologies-list">
+        <li class="popup__technologies-item">React</li>
+        <li class="popup__technologies-item">TypeScript</li>
+        <li class="popup__technologies-item">SCSS</li>
+        <li class="popup__technologies-item">CSS Modules</li>
+        <li class="popup__technologies-item">json-server</li>
+      </ul>
+
+      <h3 class="popup__heading">🔗 Links</h3>
+
+      <div class="popup__links">
+        <a class="popup__link" href="https://github.com/Hegemoth/clothing-store" target="_blank">📦 Repository</a>
+        <a class="popup__link">🌐 Soon</a>
+      </div>
+    </template>
+
+    <template class="popup-template" id="popup-template-2">
+      <h2 class="popup__title">Portfolio</h2>
+      <hr class="popup__divider" />
+      <h3 class="popup__heading">✨ Project description</h3>
+
+      <p class="popup__description">
+        I decided to create my personal site from scratch, without using frameworks or over-the-top effects, in a form that can be directly
+        interpreted by the browser.
+      </p>
+
+      <h3 class="popup__heading">🙌 What’s easy to overlook but helps fully appreciate the project?</h3>
+
+      <ul class="popup__highlights">
+        <li><strong>a11y</strong> - fully operable using only a keyboard.</li>
+        <li>
+          <strong>Full RWD</strong> - The site adapts seamlessly to all resolutions - handles dynamic resizing including navigation menus and tabIndex
+          adjustments.
+        </li>
+        <li>No external libraries were used, it's all vanilla frontend stack - <strong>HTML, CSS and JavaScript.</strong></li>
+      </ul>
 
       <h3 class="popup__heading">⚙️ Technologies</h3>
 
       <ul class="popup__technologies-list">
         <li class="popup__technologies-item">HTML</li>
-        <li class="popup__technologies-item">Sass</li>
-        <li class="popup__technologies-item">TypeScript</li>
-      </ul>
-
-      <h3 class="popup__heading">🔗 Links</h3>
-
-      <div class="popup__links">
-        <a class="popup__link" href="https://github.com/Hegemoth/media-expert-clone" target="_blank">📦 Repository</a>
-        <a class="popup__link" href="https://michaljanik-media-expert-clone.netlify.app/" target="_blank">🌐 Website</a>
-      </div>
-    </template>
-
-    <template class="popup-template" id="popup-template-2">
-      <h2 class="popup__title">Clothing Store</h2>
-      <hr class="popup__divider" />
-      <h3 class="popup__heading">✨ Project description</h3>
-
-      <p class="popup__description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum iste necessitatibus accusantium dicta consequatur iure itaque nihil sequi
-        porro aperiam consectetur alias animi dignissimos, quia atque incidunt excepturi nam dolores facere assumenda? Iure modi repellendus labore
-        molestias at ea dignissimos. Qui temporibus saepe obcaecati soluta? Itaque, ducimus sit eos, fugit sequi ex ipsum vitae officia modi repellat
-        odio impedit, distinctio doloribus dicta. Ipsam doloribus similique rerum laboriosam totam in rem. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Dolorum iste necessitatibus accusantium dicta consequatur iure itaque nihil sequi porro aperiam consectetur alias animi
-        dignissimos, quia atque incidunt excepturi nam dolores facere assumenda? Iure modi repellendus labore molestias at ea dignissimos. Qui
-        temporibus saepe obcaecati soluta? Itaque, ducimus sit eos, fugit sequi ex ipsum vitae officia modi repellat odio impedit, distinctio
-        doloribus dicta. Ipsam doloribus similique rerum laboriosam totam in rem.
-      </p>
-
-      <h3 class="popup__heading">⚙️ Technologies</h3>
-
-      <ul class="popup__technologies-list">
-        <li class="popup__technologies-item">React</li>
+        <li class="popup__technologies-item">CSS</li>
         <li class="popup__technologies-item">JavaScript</li>
-        <li class="popup__technologies-item">CSS Modules</li>
-        <li class="popup__technologies-item">React Router</li>
-        <li class="popup__technologies-item">Vite</li>
       </ul>
 
       <h3 class="popup__heading">🔗 Links</h3>
 
       <div class="popup__links">
-        <a class="popup__link" href="https://github.com/Hegemoth/react-clothing-store" target="_blank">📦 Repository</a>
-        <a class="popup__link" href="#" target="_blank">🌐 Soon</a>
+        <a class="popup__link" href="https://github.com/Hegemoth/portfolio" target="_blank">📦 Repository</a>
+        <a class="popup__link" href="#" target="_blank">🌐 Already here :)</a>
       </div>
     </template>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

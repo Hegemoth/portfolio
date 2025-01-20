@@ -1,0 +1,23 @@
+.footer {
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 12px;
+  background-color: #0c0c0c;
+}
+
+.footer__anchor {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.footer__anchor:hover {
+  color: #ff0;
+}
+
+@media screen and (min-width: 360px) {
+  .footer {
+    font-size: 16px;
+  }
+}
