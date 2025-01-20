@@ -12,7 +12,7 @@ I decided to create my personal site from scratch, without using frameworks or o
 
 ### 🙌 What’s easy to overlook but helps fully appreciate the project?
 
-- a11y - fully operable using only a keyboard.
+- a11y - fully operable using only a keyboard even during dynamic resize.
 - Full RWD - The site adapts seamlessly to all resolutions - handles dynamic resizing including modals, navigation menus and tabIndex adjustments.
 - No external libraries were used, it's all vanilla frontend stack - HTML, CSS and JavaScript.
 
